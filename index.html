@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chou Kosol – Portfolio</title>
+  <meta name="description" content="Chou Kosol - Data Science Student specializing in agricultural analytics, machine learning, and geospatial data processing in Cambodia.">
+  <meta name="keywords" content="data science, machine learning, agriculture, Cambodia, geospatial analytics, Python, TensorFlow, Google Earth Engine">
+  <meta name="author" content="Chou Kosol">
+  <meta property="og:title" content="Chou Kosol - Data Science Portfolio">
+  <meta property="og:description" content="Data Science Student specializing in agricultural analytics and machine learning">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kosolchou.github.io/my-portfolio">
+  <meta property="og:image" content="https://kosolchou.github.io/my-portfolio/assets/img/portfolio-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chou Kosol - Data Science Portfolio">
+  <meta name="twitter:description" content="Data Science Student specializing in agricultural analytics and machine learning">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,16 +23,19 @@
 </head>
 <body>
   <!-- 🔹 Navbar -->
-  <header class="navbar" id="navbar">
-    <a href="#hero" class="brand">Chou Kosol</a>
-    <nav>
+  <header class="navbar" id="navbar" role="banner">
+    <a href="#hero" class="brand" aria-label="Chou Kosol - Home">Chou Kosol</a>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <nav id="navMenu" role="navigation" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn dark" href="assets/CHOU KOSOL's CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <a class="btn dark" href="assets/CHOU KOSOL's CV.pdf" target="_blank" rel="noopener" aria-label="Download Resume PDF">Resume</a>
   </header>
 
   <!-- 🔹 Hero -->
@@ -59,8 +73,8 @@
           <span>Python</span>
           <span>Time Series</span>
           <span>GIS</span>
-          <span>Django</span>
-          <span>Sentinel-1/2</span>
+          <span>TensorFlow</span>
+          <span>Google Earth Engine</span>
         </div>
       </div>
 
@@ -105,9 +119,9 @@
       <article class="card skill-card">
         <h3>Programming</h3>
         <ul class="skill-bars">
-          <li><span>Python</span><b>92%</b><div class="meter"><i style="--p:92%"></i></div></li>
-          <li><span>SQL</span><b>85%</b><div class="meter"><i style="--p:85%"></i></div></li>
-          <li><span>JavaScript</span><b>70%</b><div class="meter"><i style="--p:70%"></i></div></li>
+          <li><span>Python</span><b>85%</b><div class="meter"><i style="--p:85%"></i></div></li>
+          <li><span>SQL</span><b>78%</b><div class="meter"><i style="--p:78%"></i></div></li>
+          <li><span>R</span><b>62%</b><div class="meter"><i style="--p:62%"></i></div></li>
         </ul>
       </article>
 
@@ -115,9 +129,9 @@
       <article class="card skill-card">
         <h3>Machine Learning</h3>
         <ul class="skill-bars">
-          <li><span>scikit-learn</span><b>90%</b><div class="meter"><i style="--p:90%"></i></div></li>
-          <li><span>PyTorch</span><b>80%</b><div class="meter"><i style="--p:80%"></i></div></li>
-          <li><span>XGBoost</span><b>85%</b><div class="meter"><i style="--p:85%"></i></div></li>
+          <li><span>scikit-learn</span><b>82%</b><div class="meter"><i style="--p:82%"></i></div></li>
+          <li><span>TensorFlow</span><b>69%</b><div class="meter"><i style="--p:69%"></i></div></li>
+          <li><span>XGBoost</span><b>75%</b><div class="meter"><i style="--p:75%"></i></div></li>
         </ul>
       </article>
 
@@ -125,28 +139,28 @@
       <article class="card skill-card">
         <h3>Data / Geo Tools</h3>
         <ul class="skill-bars">
-          <li><span>Pandas / NumPy</span><b>92%</b><div class="meter"><i style="--p:92%"></i></div></li>
-          <li><span>Rasterio / GEE</span><b>88%</b><div class="meter"><i style="--p:88%"></i></div></li>
-          <li><span>Leaflet / Folium</span><b>82%</b><div class="meter"><i style="--p:82%"></i></div></li>
+          <li><span>Pandas / NumPy</span><b>88%</b><div class="meter"><i style="--p:88%"></i></div></li>
+          <li><span>Google Earth Engine</span><b>80%</b><div class="meter"><i style="--p:80%"></i></div></li>
+          <li><span>Matplotlib / Seaborn</span><b>83%</b><div class="meter"><i style="--p:83%"></i></div></li>
         </ul>
       </article>
 
       <!-- Col 4 -->
       <article class="card skill-card">
-        <h3>Cloud & Dev</h3>
+        <h3>Tools & Platforms</h3>
         <ul class="skill-bars">
-          <li><span>Git</span><b>90%</b><div class="meter"><i style="--p:90%"></i></div></li>
-          <li><span>Docker</span><b>78%</b><div class="meter"><i style="--p:78%"></i></div></li>
-          <li><span>Django</span><b>84%</b><div class="meter"><i style="--p:84%"></i></div></li>
+          <li><span>Git / GitHub</span><b>84%</b><div class="meter"><i style="--p:84%"></i></div></li>
+          <li><span>Jupyter Notebooks</span><b>91%</b><div class="meter"><i style="--p:91%"></i></div></li>
+          <li><span>VS Code</span><b>87%</b><div class="meter"><i style="--p:87%"></i></div></li>
         </ul>
       </article>
     </div>
 
     <!-- Quick stats -->
     <div class="skill-stats">
-      <div><strong>15+</strong><span>Projects Completed</span></div>
-      <div><strong>3+</strong><span>Years Experience</span></div>
-      <div><strong>20+</strong><span>Tech & Tools</span></div>
+      <div><strong>8+</strong><span>Projects Completed</span></div>
+      <div><strong>2+</strong><span>Years Experience</span></div>
+      <div><strong>15+</strong><span>Tech & Tools</span></div>
     </div>
 
     <h3 style="text-align:center;margin-top:10px;">Languages</h3>
@@ -164,7 +178,7 @@
         <div class="projects-grid">
       <!-- Project 1 -->
       <article class="card project-card">
-        <img src="assets/img/traffic.png" alt="Traffic Prediction">
+        <img src="assets/img/traffic.png" alt="Traffic Prediction Dashboard showing time series analysis and ARIMA model results">
         <div class="project-body">
           <h3>Traffic Prediction</h3>
           <p>Forecasted vehicle traffic volume using time series models for urban planning.</p>
@@ -182,7 +196,7 @@
 
       <!-- Project 2 -->
       <article class="card project-card">
-        <img src="assets/img/stock.png" alt="AAPL Stock Forecast">
+        <img src="assets/img/stock.png" alt="AAPL Stock Price Prediction using LSTM neural networks with interactive charts">
         <div class="project-body">
           <h3>AAPL Stock Price Prediction</h3>
           <p>Applied deep learning models (LSTM/GRU) to predict Apple's stock price movements.</p>
@@ -200,7 +214,7 @@
 
       <!-- Project 3 -->
       <article class="card project-card">
-        <img src="assets/img/waterlogging.png" alt="Waterlogging Risk Monitoring">
+        <img src="assets/img/waterlogging.png" alt="Waterlogging Risk Monitoring system with Sentinel-1 SAR data and risk maps">
         <div class="project-body">
           <h3>Waterlogging Risk Monitoring</h3>
           <p>Sentinel-1 SAR project to detect hotspots and warn Cambodian farmers early.</p>
@@ -218,7 +232,7 @@
 
       <!-- Project 4 -->
       <article class="card project-card">
-        <img src="assets/img/rice.png" alt="Rice Yield Forecasting">
+        <img src="assets/img/rice.png" alt="Rice Yield Forecasting model with satellite data and time series analysis">
         <div class="project-body">
           <h3>Rice Yield Forecasting</h3>
           <p>Predicted rice production in Cambodia with time series and remote sensing data.</p>
@@ -258,7 +272,7 @@
             <div class="org">Remote Sensing & Data Analytics</div>
           </div>
           <div class="xp-meta">
-            <div class="time">Jul 2025 – Present</div>
+            <div class="time">Jan 2024 – Present</div>
             <div class="place">Phnom Penh, KH</div>
           </div>
         </header>
@@ -276,7 +290,7 @@
         </ul>
 
         <div class="chips">
-          <span>Python</span><span>Sentinel-1</span><span>Sentinel-2</span><span>Time Series</span><span>Django</span>
+          <span>Python</span><span>Google Earth Engine</span><span>TensorFlow</span><span>Time Series</span><span>Machine Learning</span>
         </div>
       </article>
     </div>
@@ -363,34 +377,46 @@
       <!-- RIGHT: Form -->
       <form class="card contact-form" id="contactForm" 
             action="https://formspree.io/f/mblzgbga" 
-            method="POST">
+            method="POST"
+            aria-label="Contact form">
         <div class="form-row two">
           <div class="form-field">
-            <label for="name">Name</label>
-            <input id="name" name="name" placeholder="Your full name" required>
+            <label for="name">Name *</label>
+            <input id="name" name="name" placeholder="Your full name" required 
+                   aria-describedby="name-error" minlength="2" maxlength="50">
+            <div class="error-message" id="name-error" role="alert"></div>
           </div>
           <div class="form-field">
-            <label for="email_i">Email</label>
-            <input id="email_i" name="email" type="email" placeholder="kosolchou@gmail.com" required>
+            <label for="email_i">Email *</label>
+            <input id="email_i" name="email" type="email" placeholder="your.email@example.com" required
+                   aria-describedby="email-error">
+            <div class="error-message" id="email-error" role="alert"></div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-field">
-            <label for="subject">Subject</label>
-            <input id="subject" name="subject" placeholder="What's this about?" required>
+            <label for="subject">Subject *</label>
+            <input id="subject" name="subject" placeholder="What's this about?" required
+                   aria-describedby="subject-error" maxlength="100">
+            <div class="error-message" id="subject-error" role="alert"></div>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me more about your project or inquiry..." required></textarea>
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me more about your project or inquiry..." required
+                      aria-describedby="message-error" minlength="10" maxlength="1000"></textarea>
+            <div class="error-message" id="message-error" role="alert"></div>
           </div>
         </div>
 
-        <button type="submit" class="btn dark full"><i class="fas fa-paper-plane"></i> Send Message</button>
-        <p id="formOk" class="muted" style="display:none;margin-top:10px;">
+        <button type="submit" class="btn dark full" id="submitBtn">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+        </button>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        <p id="formOk" class="muted success-message" style="display:none;margin-top:10px;" role="alert">
           ✅ Thanks! Your message has been sent successfully.
         </p>
       </form>

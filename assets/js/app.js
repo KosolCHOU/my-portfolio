@@ -1,5 +1,79 @@
+// Mobile menu toggle with accessibility
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const navMenu = document.getElementById('navMenu');
+  
+  if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', function() {
+      const isOpen = navMenu.classList.contains('active');
+      
+      navMenu.classList.toggle('active');
+      
+      // Update ARIA attributes
+      this.setAttribute('aria-expanded', !isOpen);
+      
+      // Change icon
+      const icon = this.querySelector('i');
+      if (!isOpen) {
+        icon.className = 'fas fa-times';
+        // Focus management
+        navMenu.querySelector('a').focus();
+      } else {
+        icon.className = 'fas fa-bars';
+      }
+    });
+    
+    // Close menu when clicking on a link
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+      });
+    });
+    
+    // Close menu on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+        mobileMenuToggle.focus();
+      }
+    });
+  }
+});
+
 // Set footer year dynamically
-document.getElementById("year").textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', function() {
+  const yearElement = document.getElementById("year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+  
+  // Check if external resources loaded properly
+  const fontAwesome = document.querySelector('link[href*="font-awesome"]');
+  const googleFonts = document.querySelector('link[href*="fonts.googleapis.com"]');
+  
+  // Add fallbacks if external resources fail
+  if (fontAwesome) {
+    fontAwesome.addEventListener('error', function() {
+      console.warn('Font Awesome failed to load');
+      // Add fallback text for icons
+      document.querySelectorAll('i[class*="fa"]').forEach(icon => {
+        if (!icon.textContent.trim()) {
+          const className = icon.className;
+          if (className.includes('fa-bars')) icon.textContent = '☰';
+          if (className.includes('fa-times')) icon.textContent = '✕';
+          if (className.includes('fa-envelope')) icon.textContent = '✉';
+          if (className.includes('fa-phone')) icon.textContent = '☎';
+          if (className.includes('fa-map-marker')) icon.textContent = '📍';
+        }
+      });
+    });
+  }
+});
 
 // ----- Active nav link on scroll -----
 const sections = [...document.querySelectorAll("section")];
@@ -62,14 +136,99 @@ if (form) {
   });
 }
 
-// Enhanced Formspree handler
+// Enhanced Formspree handler with validation
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
+  // Real-time validation
+  const fields = {
+    name: document.getElementById('name'),
+    email: document.getElementById('email_i'),
+    subject: document.getElementById('subject'),
+    message: document.getElementById('message')
+  };
+  
+  // Validation functions
+  function validateField(field, value) {
+    const errors = [];
+    
+    switch(field) {
+      case 'name':
+        if (value.length < 2) errors.push('Name must be at least 2 characters');
+        if (value.length > 50) errors.push('Name must be less than 50 characters');
+        break;
+      case 'email':
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) errors.push('Please enter a valid email address');
+        break;
+      case 'subject':
+        if (value.length < 3) errors.push('Subject must be at least 3 characters');
+        if (value.length > 100) errors.push('Subject must be less than 100 characters');
+        break;
+      case 'message':
+        if (value.length < 10) errors.push('Message must be at least 10 characters');
+        if (value.length > 1000) errors.push('Message must be less than 1000 characters');
+        break;
+    }
+    
+    return errors;
+  }
+  
+  // Add real-time validation
+  Object.keys(fields).forEach(fieldName => {
+    const field = fields[fieldName];
+    if (field) {
+      field.addEventListener('blur', function() {
+        const errors = validateField(fieldName, this.value.trim());
+        const errorElement = document.getElementById(`${fieldName}-error`);
+        
+        if (errorElement) {
+          errorElement.textContent = errors[0] || '';
+        }
+      });
+    }
+  });
+  
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formOk = document.getElementById("formOk");
-    formOk.style.display = "none"; // reset message
+    const formStatus = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
+    
+    // Reset messages
+    formOk.style.display = "none";
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+    
+    // Validate all fields
+    let hasErrors = false;
+    Object.keys(fields).forEach(fieldName => {
+      const field = fields[fieldName];
+      if (field) {
+        const errors = validateField(fieldName, field.value.trim());
+        const errorElement = document.getElementById(`${fieldName}-error`);
+        
+        if (errors.length > 0) {
+          hasErrors = true;
+          if (errorElement) {
+            errorElement.textContent = errors[0];
+          }
+        } else if (errorElement) {
+          errorElement.textContent = '';
+        }
+      }
+    });
+    
+    if (hasErrors) {
+      formStatus.textContent = 'Please fix the errors above before submitting.';
+      formStatus.className = 'form-status error';
+      return;
+    }
+    
+    // Show loading state
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
 
     const data = new FormData(contactForm);
 
@@ -81,14 +240,20 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        formOk.style.display = "block";    // show success
-        contactForm.reset();               // clear form
+        formOk.style.display = "block";
+        formStatus.textContent = 'Message sent successfully!';
+        formStatus.className = 'form-status success';
+        contactForm.reset();
       } else {
-        alert("❌ Something went wrong. Please try again.");
+        throw new Error('Server error');
       }
     } catch (err) {
       console.error(err);
-      alert("⚠️ Network error. Please try again later.");
+      formStatus.textContent = 'Network error. Please try again later.';
+      formStatus.className = 'form-status error';
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     }
   });
 }
