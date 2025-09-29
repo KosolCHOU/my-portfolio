@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marc Mustang – Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chou Kosol – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <!-- 🔹 Navbar -->
-  <header class="navbar">
-    <div class="brand">Marc Mustang</div>
+  <header class="navbar" id="navbar">
+    <a href="#hero" class="brand">Chou Kosol</a>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -17,107 +21,433 @@
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn" href="assets/Marc_Mustang_CV.pdf" target="_blank">Resume</a>
+    <a class="btn dark" href="assets/CHOU KOSOL's CV.pdf" target="_blank" rel="noopener">Resume</a>
   </header>
 
   <!-- 🔹 Hero -->
-  <section class="hero">
-    <h1>Hi, I’m Marc Mustang</h1>
-    <h2>Data Scientist & Machine Learning Engineer</h2>
-    <p>I transform Sentinel-1/2 radar into actionable insights for Cambodian farmers, building apps with Django, ML, and GIS.</p>
-    <div class="buttons">
-      <a href="#projects" class="btn">View My Work</a>
-      <a href="assets/Marc_Mustang_CV.pdf" class="btn ghost">Download Resume</a>
+  <section id="hero" class="hero">
+    <h1>Hi, I’m Chou Kosol</h1>
+    <h2>Data Science Student</h2>
+    <p>Curious and driven student with a strong passion for data science and technology. I enjoy exploring new ideas, solving challenging problems, and turning theory into practical insights.</p>
+    <div class="buttons buttons-center">
+      <a href="#projects" class="btn dark">View My Work</a>
+      <button type="button" class="btn dark" id="downloadPageBtn">Download Portfolio</button>
     </div>
   </section>
 
   <!-- 🔹 About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I specialize in Earth observation, remote sensing, and AI for agriculture. My passion is turning radar signals into real-world advice for rice farmers.</p>
-    <div class="tags">
-      <span>Python</span> <span>Django</span> <span>GIS</span> <span>Machine Learning</span>
+  <section id="about" class="about-section">
+    <h2 style="text-align:center;">About Me</h2>
+    <p class="muted" style="text-align:center;max-width:760px;margin:0 auto 22px;">
+      I’m a data science student focused on machine learning and geospatial analytics for agriculture in Cambodia.
+      I enjoy solving real problems, turning radar data into insights, and building clean, farmer-friendly tools.
+    </p>
+
+    <div class="about-grid">
+      <!-- LEFT: Bio + chips -->
+      <div class="about-left">
+        <p>
+          I’m currently studying Data Science at ITC and working on projects like waterlogging monitoring (Sentinel-1),
+          pest & disease risk detection (Sentinel-2), rice yield forecasting, and crop recommendation. I love
+          collaborating, explaining complex ideas simply, and shipping features that help farmers make better decisions.
+        </p>
+        <p>
+          When I’m not coding, I’m usually learning, writing notes, or sketching new UX ideas for farmer dashboards.
+        </p>
+
+        <div class="chips">
+          <span>Python</span>
+          <span>Time Series</span>
+          <span>GIS</span>
+          <span>Django</span>
+          <span>Sentinel-1/2</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Feature cards -->
+      <div class="about-right">
+        <article class="card about-card">
+          <div class="about-ico"><i class="fas fa-robot"></i></div>
+          <div>
+            <h3>Machine Learning</h3>
+            <p>Classification, forecasting, and model evaluation for real-world decisions at field and province scales.</p>
+          </div>
+        </article>
+
+        <article class="card about-card">
+          <div class="about-ico"><i class="fas fa-map-marked-alt"></i></div>
+          <div>
+            <h3>Data Engineering</h3>
+            <p>GEE exports, Rasterio pipelines, and Django services to move SAR/optical data into usable layers.</p>
+          </div>
+        </article>
+
+        <article class="card about-card">
+          <div class="about-ico"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <h3>Analytics & Insights</h3>
+            <p>Turning noisy signals into concise guidance for farmers—clear language, simple UI, actionable steps.</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- 🔹 Skills -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">
-        <label>Python</label>
-        <div class="bar"><i style="width:90%"></i></div>
-      </div>
-      <div class="skill">
-        <label>Django</label>
-        <div class="bar"><i style="width:80%"></i></div>
-      </div>
-      <div class="skill">
-        <label>JavaScript</label>
-        <div class="bar"><i style="width:60%"></i></div>
-      </div>
-      <div class="skill">
-        <label>Remote Sensing</label>
-        <div class="bar"><i style="width:85%"></i></div>
-      </div>
+  <section id="skills" class="skills-section">
+    <h2 style="text-align:center;">Technical Skills</h2>
+    <p class="muted" style="text-align:center;max-width:760px;margin:0 auto 18px;">
+      A focused toolkit for end-to-end data science and geospatial projects.
+    </p>
+
+    <div class="skill-cols">
+      <!-- Col 1 -->
+      <article class="card skill-card">
+        <h3>Programming</h3>
+        <ul class="skill-bars">
+          <li><span>Python</span><b>92%</b><div class="meter"><i style="--p:92%"></i></div></li>
+          <li><span>SQL</span><b>85%</b><div class="meter"><i style="--p:85%"></i></div></li>
+          <li><span>JavaScript</span><b>70%</b><div class="meter"><i style="--p:70%"></i></div></li>
+        </ul>
+      </article>
+
+      <!-- Col 2 -->
+      <article class="card skill-card">
+        <h3>Machine Learning</h3>
+        <ul class="skill-bars">
+          <li><span>scikit-learn</span><b>90%</b><div class="meter"><i style="--p:90%"></i></div></li>
+          <li><span>PyTorch</span><b>80%</b><div class="meter"><i style="--p:80%"></i></div></li>
+          <li><span>XGBoost</span><b>85%</b><div class="meter"><i style="--p:85%"></i></div></li>
+        </ul>
+      </article>
+
+      <!-- Col 3 -->
+      <article class="card skill-card">
+        <h3>Data / Geo Tools</h3>
+        <ul class="skill-bars">
+          <li><span>Pandas / NumPy</span><b>92%</b><div class="meter"><i style="--p:92%"></i></div></li>
+          <li><span>Rasterio / GEE</span><b>88%</b><div class="meter"><i style="--p:88%"></i></div></li>
+          <li><span>Leaflet / Folium</span><b>82%</b><div class="meter"><i style="--p:82%"></i></div></li>
+        </ul>
+      </article>
+
+      <!-- Col 4 -->
+      <article class="card skill-card">
+        <h3>Cloud & Dev</h3>
+        <ul class="skill-bars">
+          <li><span>Git</span><b>90%</b><div class="meter"><i style="--p:90%"></i></div></li>
+          <li><span>Docker</span><b>78%</b><div class="meter"><i style="--p:78%"></i></div></li>
+          <li><span>Django</span><b>84%</b><div class="meter"><i style="--p:84%"></i></div></li>
+        </ul>
+      </article>
     </div>
+
+    <!-- Quick stats -->
+    <div class="skill-stats">
+      <div><strong>15+</strong><span>Projects Completed</span></div>
+      <div><strong>3+</strong><span>Years Experience</span></div>
+      <div><strong>20+</strong><span>Tech & Tools</span></div>
+    </div>
+
+    <h3 style="text-align:center;margin-top:10px;">Languages</h3>
+    <p style="text-align:center;">Khmer (Fluent) · English (Intermediate) · French (Intermediate)</p>
   </section>
 
   <!-- 🔹 Projects -->
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>🌾 CropXcel</h3>
-        <p>Sentinel-1 SAR hotspot detection + farmer advice system.</p>
-        <a href="#" class="btn">Demo</a>
-        <a href="#" class="btn ghost">Code</a>
+  <section id="projects" class="projects-section">
+    <h2 style="text-align:center;">Featured Projects</h2>
+    <p class="muted" style="text-align:center;max-width:760px;margin:0 auto 22px;">
+      A selection of projects where I applied machine learning, geospatial data, and time series
+      forecasting to solve real-world problems.
+    </p>
+
+        <div class="projects-grid">
+      <!-- Project 1 -->
+      <article class="card project-card">
+        <img src="assets/img/traffic.png" alt="Traffic Prediction">
+        <div class="project-body">
+          <h3>Traffic Prediction</h3>
+          <p>Forecasted vehicle traffic volume using time series models for urban planning.</p>
+          <div class="tags"><span>Python</span><span>ARIMA</span><span>Time Series</span></div>
+          <ul class="bullets">
+            <li>Predicted traffic trends with >85% accuracy</li>
+            <li>Enabled better congestion management</li>
+          </ul>
+          <div class="buttons">
+            <a href="https://github.com/KosolCHOU/traffic-prediction" target="_blank" rel="noopener" class="btn ghost">Code</a>
+            <a href="https://kosolchou.github.io/traffic-prediction-demo" target="_blank" rel="noopener" class="btn dark">Demo</a>
+          </div>
+        </div>
       </article>
-      <article class="card">
-        <h3>Rice Variety Recommender</h3>
-        <p>Django app matching nutrients & weather to resilient varieties.</p>
-        <a href="#" class="btn">Demo</a>
+
+      <!-- Project 2 -->
+      <article class="card project-card">
+        <img src="assets/img/stock.png" alt="AAPL Stock Forecast">
+        <div class="project-body">
+          <h3>AAPL Stock Price Prediction</h3>
+          <p>Applied deep learning models (LSTM/GRU) to predict Apple's stock price movements.</p>
+          <div class="tags"><span>TensorFlow</span><span>LSTM</span><span>Visualization</span></div>
+          <ul class="bullets">
+            <li>Achieved RMSE < 2.5 on test set</li>
+            <li>Interactive charts for investor insights</li>
+          </ul>
+          <div class="buttons">
+            <a href="https://github.com/KosolCHOU/aapl-stock-prediction" target="_blank" rel="noopener" class="btn ghost">Code</a>
+            <a href="https://kosolchou.github.io/stock-prediction-demo" target="_blank" rel="noopener" class="btn dark">Demo</a>
+          </div>
+        </div>
       </article>
-      <article class="card">
-        <h3>NDVI Time Series</h3>
-        <p>Field-level vegetation analysis & alerts for sudden drops.</p>
-        <a href="#" class="btn ghost">Code</a>
+
+      <!-- Project 3 -->
+      <article class="card project-card">
+        <img src="assets/img/waterlogging.png" alt="Waterlogging Risk Monitoring">
+        <div class="project-body">
+          <h3>Waterlogging Risk Monitoring</h3>
+          <p>Sentinel-1 SAR project to detect hotspots and warn Cambodian farmers early.</p>
+          <div class="tags"><span>Sentinel-1</span><span>Django</span><span>GIS</span></div>
+          <ul class="bullets">
+            <li>Built automated risk maps with hotspots</li>
+            <li>Reduced farmer crop loss via early alerts</li>
+          </ul>
+          <div class="buttons">
+            <a href="https://github.com/KosolCHOU/waterlogging-monitoring" target="_blank" rel="noopener" class="btn ghost">Code</a>
+            <a href="https://waterlogging-monitor.herokuapp.com" target="_blank" rel="noopener" class="btn dark">Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="card project-card">
+        <img src="assets/img/rice.png" alt="Rice Yield Forecasting">
+        <div class="project-body">
+          <h3>Rice Yield Forecasting</h3>
+          <p>Predicted rice production in Cambodia with time series and remote sensing data.</p>
+          <div class="tags"><span>Time Series</span><span>Forecasting</span><span>AgriTech</span></div>
+          <ul class="bullets">
+            <li>Forecasted yields at provincial scale</li>
+            <li>Supports agricultural planning decisions</li>
+          </ul>
+          <div class="buttons">
+            <a href="https://github.com/KosolCHOU/rice-yield-forecasting" target="_blank" rel="noopener" class="btn ghost">Code</a>
+            <a href="https://kosolchou.github.io/rice-yield-demo" target="_blank" rel="noopener" class="btn dark">Demo</a>
+          </div>
+        </div>
       </article>
     </div>
   </section>
 
   <!-- 🔹 Experience -->
-  <section id="experience">
-    <h2>Experience & Education</h2>
-    <div class="timeline">
-      <div class="item">
-        <h3>Founder – CropXcel</h3>
-        <span>2024 – Present</span>
-        <p>Building Cambodia’s first radar-based farmer advisory platform.</p>
-      </div>
-      <div class="item">
-        <h3>Student – ITC</h3>
-        <span>2020 – Present</span>
-        <p>Full scholarship, focus on AI, geospatial, and data science.</p>
-      </div>
+  <section id="experience" class="xp-section">
+    <h2 style="text-align:center;">Experience & Education</h2>
+    <p class="muted" style="text-align:center;max-width:760px;margin:0 auto 18px;">
+      My professional journey in data science and geospatial analytics, focused on agriculture.
+    </p>
+
+    <!-- Segmented control -->
+    <div class="xp-toggle" role="tablist" aria-label="Experience tabs">
+      <button class="seg active" data-tab="xp">Experience</button>
+      <button class="seg" data-tab="edu">Education</button>
+    </div>
+
+    <!-- EXPERIENCE LIST -->
+    <div class="xp-list" id="xp-tab">
+      <article class="card xp-card">
+        <header class="xp-head">
+          <div>
+            <h3>REDA Lab — Researcher</h3>
+            <div class="org">Remote Sensing & Data Analytics</div>
+          </div>
+          <div class="xp-meta">
+            <div class="time">Jul 2025 – Present</div>
+            <div class="place">Phnom Penh, KH</div>
+          </div>
+        </header>
+
+        <p class="xp-desc">
+          Contributed to waterlogging monitoring (Sentinel-1), pest & disease risk detection (Sentinel-2),
+          rice yield forecasting, and crop recommendation for Cambodian farmers.
+        </p>
+
+        <div class="xp-subtitle">Key Achievements</div>
+        <ul class="xp-bullets">
+          <li>Built SAR-based hotspot detection that reduced false alarms with ratio/variance features.</li>
+          <li>Delivered field alerts & dashboards using Django + Leaflet + GEE exports.</li>
+          <li>Implemented time-series forecasting pipeline for provincial rice yield.</li>
+        </ul>
+
+        <div class="chips">
+          <span>Python</span><span>Sentinel-1</span><span>Sentinel-2</span><span>Time Series</span><span>Django</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- EDUCATION LIST -->
+    <div class="xp-list hidden" id="edu-tab">
+      <article class="card xp-card">
+        <header class="xp-head">
+          <div>
+            <h3>Institute of Technology of Cambodia (ITC)</h3>
+            <div class="org">B.Sc. Data Science</div>
+          </div>
+          <div class="xp-meta">
+            <div class="time">2022 – Present</div>
+            <div class="place">Phnom Penh, KH</div>
+          </div>
+        </header>
+
+        <p class="xp-desc">
+          GPA: 4.0 (Year 1), 3.5 (Year 2), 4.0 (Year 3) — Expected Graduation 2027.
+        </p>
+
+        <div class="xp-subtitle">Highlights</div>
+        <ul class="xp-bullets">
+          <li>Traffic prediction, AAPL stock forecasting, MNIST digit recognition.</li>
+          <li>Event management system; Poke-Food website with recommendation.</li>
+        </ul>
+
+        <div class="chips">
+          <span>Machine Learning</span><span>Geospatial</span><span>Deep Learning</span><span>Projects</span>
+        </div>
+      </article>
     </div>
   </section>
 
   <!-- 🔹 Contact -->
   <section id="contact">
-    <h2>Get In Touch</h2>
-    <p>I’m open to collaborations, speaking, or just a chat.</p>
-    <ul>
-      <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
-      <li>GitHub: <a href="https://github.com/YOUR_USERNAME" target="_blank">github.com/YOUR_USERNAME</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank">linkedin.com/in/YOUR_USERNAME</a></li>
-    </ul>
+    <h2 style="text-align:center;">Get In Touch</h2>
+    <p class="muted" style="text-align:center;max-width:720px;margin:0 auto 26px;">
+      I'm always interested in new opportunities and collaborations. Let's discuss how we can work together
+      on your next data science project.
+    </p>
+
+    <div class="contact-wrap">
+      <!-- LEFT: Contact cards -->
+      <div class="contact-cards">
+        <div class="card contact-card">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="label">Email</div>
+            <div class="value"><a href="mailto:kosolchou@gmail.com">kosolchou@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:+85517628314">+855 17 628 314</a></div>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="label">Location</div>
+            <div class="value">#144, St 186, Phnom Penh</div>
+          </div>
+        </div>
+
+        <div class="contact-notes">
+          <div class="contact-notes">
+            <h4>Let’s Connect</h4>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <ul>
+              <li>✔ Available for consulting projects</li>
+              <li>✔ Open to speaking engagements</li>
+              <li>✔ Interested in research collaborations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <form class="card contact-form" id="contactForm" 
+            action="https://formspree.io/f/mblzgbga" 
+            method="POST">
+        <div class="form-row two">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-field">
+            <label for="email_i">Email</label>
+            <input id="email_i" name="email" type="email" placeholder="kosolchou@gmail.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" placeholder="What's this about?" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me more about your project or inquiry..." required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn dark full"><i class="fas fa-paper-plane"></i> Send Message</button>
+        <p id="formOk" class="muted" style="display:none;margin-top:10px;">
+          ✅ Thanks! Your message has been sent successfully.
+        </p>
+      </form>
+    </div>
   </section>
 
-  <footer>
-    <p>© <span id="year"></span> Marc Mustang</p>
+  <!-- 🔹 Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <!-- Left: About -->
+      <div class="footer-col">
+        <h3>Chou Kosol</h3>
+        <p>Data Science student passionate about applying machine learning and geospatial data to support Cambodian farmers.</p>
+        <div class="socials">
+          <a href="https://github.com/KosolCHOU" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:kosolchou@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Data Analysis & Forecasting</li>
+          <li>Geospatial Processing</li>
+          <li>Technical Collaboration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Chou Kosol. All rights reserved.</p>
+    </div>
   </footer>
 
+  <!-- html2pdf library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+          integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer"
+          onload="console.log('html2pdf loaded successfully')"
+          onerror="console.error('Failed to load html2pdf library')">
+  </script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
