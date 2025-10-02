@@ -65,8 +65,8 @@
           I'm passionate about applying data science techniques to solve complex problems, particularly in areas like predictive modeling, time series analysis, and agricultural technology.
         </p>
         <p>
-          My focus is on building practical, scalable solutions that demonstrate both technical proficiency and real-world impact. 
-          I enjoy working with diverse datasets, implementing machine learning algorithms, and creating data visualizations that tell compelling stories.
+          Creator of <strong>CropXcel</strong>, a full-stack agricultural intelligence platform that uses satellite remote sensing and machine learning to help farmers combat crop waterlogging. 
+          My focus is on building practical, scalable solutions that demonstrate both technical proficiency and real-world impact—from processing Sentinel-1 SAR data to deploying production-ready web applications.
         </p>
 
         <div class="chips">
@@ -169,33 +169,72 @@
 
   <!-- 🔹 Projects -->
   <section id="projects" class="projects-section">
-    <h2 style="text-align:center;">Data Science Project Portfolio</h2>
-    <p class="muted" style="text-align:center;max-width:760px;margin:0 auto 22px;">
-      A collection of data science projects showcasing machine learning, predictive modeling, and analytical problem-solving skills. 
-      Each project demonstrates practical application of statistical methods and programming expertise.
-    </p>
+    <!-- 🌟 FEATURED PROJECT SPOTLIGHT -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <div style="display: inline-block; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; padding: 8px 20px; border-radius: 25px; font-size: 14px; font-weight: 600; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);">
+        ⭐ FEATURED PROJECT
+      </div>
+      <h2 style="margin-top: 10px; margin-bottom: 15px;">🌾 CropXcel - Agricultural Intelligence Platform</h2>
+      <p class="muted" style="max-width:860px;margin:0 auto;">
+        My flagship full-stack project combining satellite remote sensing, machine learning, and web development to address real-world agricultural challenges and food security.
+      </p>
+    </div>
 
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <article class="card project-card">
-        <img src="assets/img/traffic.png" alt="Traffic Prediction Dashboard showing time series analysis and ARIMA model results">
-        <div class="project-body">
-          <h3>Urban Traffic Flow Prediction</h3>
-          <p>Advanced time series forecasting system using ARIMA models and statistical analysis to predict traffic patterns, demonstrating expertise in temporal data analysis and predictive modeling.</p>
-          <div class="tags"><span>Python</span><span>ARIMA</span><span>Time Series</span><span>Pandas</span></div>
-          <ul class="bullets">
-            <li>Achieved >85% prediction accuracy using ARIMA modeling</li>
-            <li>Implemented comprehensive data preprocessing pipeline</li>
-            <li>Built interactive dashboard for traffic visualization</li>
-          </ul>
-          <div class="buttons">
-            <a href="https://github.com/KosolCHOU/traffic-prediction" target="_blank" rel="noopener" class="btn ghost">Code</a>
-            <a href="https://kosolchou.github.io/traffic-prediction-demo" target="_blank" rel="noopener" class="btn dark">Demo</a>
+    <!-- Featured Project Card - Full Width Standalone -->
+    <div style="max-width: 1100px; margin: 0 auto 60px auto;">
+      <article class="card featured-project-card" style="border: 3px solid #0ea5e9; background: linear-gradient(to bottom, #ffffff 0%, #f0f9ff 100%); box-shadow: 0 8px 24px rgba(14, 165, 233, 0.15);">
+        <div class="featured-project-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 30px;">
+          <!-- Left: Image -->
+          <div class="featured-project-image" style="display: flex; align-items: center; justify-content: center;">
+            <img src="assets/img/waterlogging.png" alt="CropXcel Waterlogging Monitoring System with Sentinel satellite data" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          </div>
+          
+          <!-- Right: Content -->
+          <div class="featured-project-content">
+            <h3 style="color: #0ea5e9; font-size: 24px; margin-bottom: 15px;">CropXcel - Agricultural Intelligence Platform</h3>
+            <p style="font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
+              <strong>Full-stack precision agriculture solution</strong> leveraging satellite remote sensing and machine learning to combat crop waterlogging—a critical threat affecting millions of hectares globally. This platform processes real-time Sentinel-1 SAR data to provide actionable insights for farmers and agricultural planners, bridging the gap between space technology and sustainable farming.
+            </p>
+            
+            <div class="tags" style="margin-bottom: 20px;">
+              <span>Django</span><span>Python</span><span>Sentinel-1 SAR</span><span>Machine Learning</span><span>PostgreSQL</span><span>GIS</span><span>Remote Sensing</span><span>Leaflet.js</span>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+              <h4 style="color: #0284c7; font-size: 16px; margin-bottom: 12px;">Key Features & Impact:</h4>
+              <ul style="font-size: 14px; line-height: 1.8; color: #475569;">
+                <li style="margin-bottom: 8px;">✔ <strong>Real-time Satellite Analysis:</strong> Automated processing of Sentinel-1 SAR imagery with VV/VH polarization analysis</li>
+                <li style="margin-bottom: 8px;">✔ <strong>Interactive GIS Dashboard:</strong> Web-based mapping with field boundary drawing and multi-layer visualization</li>
+                <li style="margin-bottom: 8px;">✔ <strong>Smart Alert System:</strong> Automated hotspot identification with risk assessment and recommendations</li>
+                <li style="margin-bottom: 8px;">✔ <strong>AI-Powered Recommendations:</strong> ML engine for optimal crop suggestions based on soil and terrain data</li>
+                <li style="margin-bottom: 8px;">✔ <strong>End-to-End Development:</strong> Complete solution from data pipeline to production deployment</li>
+                <li style="margin-bottom: 8px;">✔ <strong>Real-World Impact:</strong> Helps farmers prevent crop losses and optimize land use for food security</li>
+              </ul>
+            </div>
+            
+            <div class="buttons featured-project-buttons" style="gap: 12px; display: flex; justify-content: center; align-items: center;">
+              <a href="https://github.com/KosolCHOU/Waterlogging-Monitoring" target="_blank" rel="noopener" class="btn ghost" style="flex: 1; text-align: center;">
+                <i class="fab fa-github"></i> View Source Code
+              </a>
+              <a href="https://waterlogging-monitoring.onrender.com" target="_blank" rel="noopener" class="btn dark" style="flex: 1; text-align: center;">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </article>
+    </div>
 
-      <!-- Project 2 -->
+    <!-- Other Projects Section -->
+    <div style="text-align: center; margin: 50px auto 30px auto;">
+      <h2>More Data Science Projects</h2>
+      <p class="muted" style="max-width:760px;margin:0 auto 22px;">
+        Additional projects showcasing machine learning, predictive modeling, and analytical problem-solving skills across various domains.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
       <article class="card project-card">
         <img src="assets/img/stock.png" alt="AAPL Stock Price Prediction using LSTM neural networks with interactive charts">
         <div class="project-body">
@@ -208,47 +247,51 @@
             <li>Implemented advanced feature engineering techniques</li>
           </ul>
           <div class="buttons">
-            <a href="https://github.com/KosolCHOU/aapl-stock-prediction" target="_blank" rel="noopener" class="btn ghost">Code</a>
-            <a href="https://kosolchou.github.io/stock-prediction-demo" target="_blank" rel="noopener" class="btn dark">Demo</a>
+            <a href="https://github.com/KosolCHOU/aapl-stock-prediction" target="_blank" rel="noopener" class="btn ghost"><i class="fab fa-github"></i> Code</a>
+            <a href="https://kosolchou.github.io/stock-prediction-demo" target="_blank" rel="noopener" class="btn dark"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card project-card">
+        <img src="assets/img/traffic.png" alt="Traffic Prediction Dashboard showing time series analysis and ARIMA model results">
+        <div class="project-body">
+          <h3>Urban Traffic Flow Prediction</h3>
+          <p>Advanced time series forecasting system using ARIMA models and statistical analysis to predict traffic patterns, demonstrating expertise in temporal data analysis and predictive modeling.</p>
+          <div class="tags"><span>Python</span><span>ARIMA</span><span>Time Series</span><span>Pandas</span></div>
+          <ul class="bullets">
+            <li>Achieved >85% prediction accuracy using ARIMA modeling</li>
+            <li>Implemented comprehensive data preprocessing pipeline</li>
+            <li>Built interactive dashboard for traffic visualization</li>
+          </ul>
+          <div class="buttons">
+            <a href="https://github.com/KosolCHOU/traffic-prediction" target="_blank" rel="noopener" class="btn ghost"><i class="fab fa-github"></i> Code</a>
+            <a href="https://kosolchou.github.io/traffic-prediction-demo" target="_blank" rel="noopener" class="btn dark"><i class="fas fa-external-link-alt"></i> Demo</a>
           </div>
         </div>
       </article>
 
       <!-- Project 3 -->
-      <article class="card project-card">
-        <img src="assets/img/waterlogging.png" alt="CropXcel Waterlogging Monitoring System with Sentinel satellite data">
-        <div class="project-body">
-          <h3>CropXcel - Waterlogging Monitoring System</h3>
-          <p>Advanced agricultural monitoring platform using Sentinel satellite data and machine learning to detect waterlogging conditions in crop fields, providing real-time insights for precision agriculture and crop management.</p>
-          <div class="tags"><span>Django</span><span>Python</span><span>Sentinel-1 SAR</span><span>Machine Learning</span><span>GIS</span><span>Remote Sensing</span></div>
-          <ul class="bullets">
-            <li>Real-time waterlogging detection using Sentinel-1 SAR imagery</li>
-            <li>Interactive web dashboard with field mapping and analysis tools</li>
-            <li>Automated hotspot identification and alert system</li>
-            <li>Comprehensive crop recommendation engine based on soil conditions</li>
-          </ul>
-          <div class="buttons">
-            <a href="https://github.com/KosolCHOU/Waterlogging-Monitoring" target="_blank" rel="noopener" class="btn ghost">Code</a>
-            <a href="https://waterlogging-monitoring.onrender.com" target="_blank" rel="noopener" class="btn dark">Demo</a>
-          </div>
-        </div>
-      </article>
 
       <!-- Project 4 -->
       <article class="card project-card">
-        <img src="assets/img/rice.png" alt="Time Series Forecasting model with advanced statistical methods">
+        <img src="assets/img/stock.png" alt="AAPL Stock Price Prediction using LSTM and GRU neural networks">
         <div class="project-body">
-          <h3>Advanced Time Series Forecasting</h3>
-          <p>Comprehensive forecasting system combining multiple data sources and statistical methods, showcasing expertise in predictive modeling and multi-variable time series analysis.</p>
-          <div class="tags"><span>Python</span><span>Time Series</span><span>Statistical Modeling</span><span>Data Integration</span></div>
+          <h3>AAPL Stock Price Prediction with Deep Learning</h3>
+          <p>Comprehensive time series analysis and forecasting system using LSTM and GRU neural networks to predict Apple stock prices. Built with extensive data visualization and comparative model evaluation using 10+ years of historical data (2015-2025).</p>
+          <div class="tags"><span>TensorFlow</span><span>LSTM</span><span>GRU</span><span>Time Series</span><span>Python</span></div>
           <ul class="bullets">
-            <li>Improved forecast accuracy by 35% using ensemble methods</li>
-            <li>Integrated multiple data sources for enhanced predictions</li>
-            <li>Developed automated model selection pipeline</li>
+            <li>Achieved 92%+ R² score with RMSE of 6.46 (LSTM) and 6.60 (GRU)</li>
+            <li>Implemented 7-day ahead forecasting with comparative model analysis</li>
+            <li>Built comprehensive EDA with 15+ visualizations and feature engineering</li>
           </ul>
           <div class="buttons">
-            <a href="https://github.com/KosolCHOU/time-series-forecasting" target="_blank" rel="noopener" class="btn ghost">Code</a>
-            <a href="https://kosolchou.github.io/forecasting-demo" target="_blank" rel="noopener" class="btn dark">Demo</a>
+            <a href="https://github.com/KosolCHOU/AAPL-Stock-Price-Prediction" target="_blank" rel="noopener" class="btn ghost"><i class="fab fa-github"></i> Code</a>
+            <a href="https://github.com/KosolCHOU/AAPL-Stock-Price-Prediction/blob/main/AAPL%20Stock%20Price%20Prediction/AAPL_forcasting.ipynb" target="_blank" rel="noopener" class="btn dark"><i class="fas fa-book-open"></i> Notebook</a>
+          </div>
+        </div>
+      </article>
           </div>
         </div>
       </article>

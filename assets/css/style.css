@@ -750,3 +750,79 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Featured Project Responsive Styles */
+@media (max-width: 768px) {
+  /* Stack featured project on tablets and mobile */
+  .featured-project-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+  
+  .featured-project-card {
+    border-width: 2px !important;
+  }
+  
+  .featured-project-content h3 {
+    font-size: 20px !important;
+  }
+  
+  .featured-project-content p {
+    font-size: 15px !important;
+  }
+  
+  .featured-project-content h4 {
+    font-size: 15px !important;
+  }
+  
+  .featured-project-content ul {
+    font-size: 13px !important;
+  }
+  
+  .featured-project-buttons {
+    flex-direction: column !important;
+  }
+  
+  .featured-project-buttons a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens - further adjustments */
+  .featured-project-grid {
+    padding: 16px !important;
+    gap: 16px !important;
+  }
+  
+  .featured-project-content h3 {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .featured-project-content p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .featured-project-content .tags {
+    margin-bottom: 16px !important;
+  }
+  
+  .featured-project-content .tags span {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+  
+  .featured-project-content h4 {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .featured-project-content ul li {
+    margin-bottom: 6px !important;
+    font-size: 12px !important;
+  }
+}
